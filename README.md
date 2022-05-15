@@ -14,5 +14,6 @@ Por último, creamos su correspondiente  docker-compose.yaml para poder utilizar
 Ahora solo faltaría ejecutar el docker-compose.yml a través del comando: "docker-compose up" y probar su funcionamiento con Postman.
 
 Ahora sí pasamos al reto final. Este consistía en Dockerizar los micros que habíamos creado en la formación pasada de Spring.
-Para conseguir esto hemos tenido que crear un dockerfile para cada micro (todos con el mismo contenido que el de priceservice ya que sólamente tenemos un .jar por directorio y no hace falta indicarle el nombre exacto del archivo) con el propósito de crear una imagen de estos a través de un build y crear un docker-compose.yml que ejecute todos los micros a la vez.
+Para conseguir esto hemos tenido que crear un dockerfile para cada micro (todos con el mismo contenido que el de priceservice ya que sólamente tenemos un .jar por directorio y no hace falta indicarle el nombre exacto del archivo) con el propósito de crear una imagen de estos a través de un build y crear un docker-compose.yml que ejecute todos los micros a la vez llamando a las imágenes previamente creadas a través de sus dockerfile.
+Para levantar el docker-compose.yml ejecutamos de nuevo el comando "docker-compose up" y arrancarían los contenedores en orden junto con sus dependencias. Para parar la ejecución ejecutamos "docker-compose down"
 
